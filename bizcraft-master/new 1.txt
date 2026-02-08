@@ -1,0 +1,25 @@
+Toufique
+(10:36:07 AM) path('mfs/bkash-fund-transfer/', bkash_views.BkashFundTransfer.as_view(), name='bkash_fund_transfer'),
+# path('mfs-fund-transfer/', mfs_views.MfsFundTransfer.as_view(), name='mfs_fund_transfer'),
+
+
+    path('mfs/bkash-fund-transfer-confirm/', bkash_views.BkashFundTransferConfirm.as_view(), name='bkash_fund_transfer_confirm'),
+# path('mfs-fund-transfer-confirm/', mfs_views.MfsFundTransferConfirm.as_view(), name='mfs_fund_transfer_confirm'),
+
+    path('mfs/bkash-fund-transfer-history/', bkash_views.BkashFundTransferHistory.as_view(), name='bkash_fund_transfer_history'),
+    # path('mfs-fund-transfer-history/', mfs_views.MfsFundTransferHistory.as_view(), name='mfs_fund_transfer_history'),
+(10:38:01 AM) path('mfs/bkash-fund-transfer/', bkash_views.BkashFundTransfer.as_view(), name='bkash_fund_transfer'),
+# path('mfs-fund-transfer/', mfs_views.MfsFundTransfer.as_view(), name='mfs_fund_transfer'),
+
+
+    path('mfs/bkash-fund-transfer-confirm/', bkash_views.BkashFundTransferConfirm.as_view(), name='bkash_fund_transfer_confirm'),
+# path('mfs-fund-transfer-confirm/', mfs_views.MfsFundTransferConfirm.as_view(), name='mfs_fund_transfer_confirm'),
+
+    path('mfs/bkash-fund-transfer-history/', bkash_views.BkashFundTransferHistory.as_view(), name='bkash_fund_transfer_history'),
+    # path('mfs-fund-transfer-history/', mfs_views.MfsFundTransferHistory.as_view(), name='mfs_fund_transfer_history'),
+
+
+
+path('mfs/mfs-add-beneficiary/', common_views.MfsAddBeneficiary.as_view(), name='mfs_add_beneficiary'),
+    path('mfs/mfs-get-beneficiary/', common_views.GetMfsBeneficiaryAccounts.as_view(), name='mfs_get_beneficiary'),
+    path('mfs/mfs-remove-beneficiary/', common_views.RemoveMfsBeneficiaryAccounts.as_view(), name='mfs_remove_beneficiary'),
