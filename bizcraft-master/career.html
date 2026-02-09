@@ -534,5 +534,12 @@
 	<!-- Template custom -->
 	<script type="text/javascript" src="js/custom.js"></script>
 	</div><!-- Body inner end -->
+    <script>
+	  fetch("navigation.html")
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById("nav-placeholder").innerHTML = data;
+		});
+	</script>
 </body>
 </html>
