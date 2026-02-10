@@ -68,30 +68,18 @@
 				        <span class="icon-bar"></span>
 				    </button>
 				    <div class="navbar-brand navbar-bg">
-					    <a href="index.html">
-					    	<img class="img-responsive" src="images/logo.png" alt="logo">
-					    </a> 
-				    </div>                   
+						<img class="img-responsive" src="images/logo.png" alt="logo">
+				    </div>
 				</div><!--/ Logo end -->
 				<div id="nav-placeholder"></div>
 			</div><!--/ Row end -->
 		</div><!--/ Container end -->
 	</header><!--/ Header end -->
 
-	<div id="banner-area">
+	<!<div id="banner-area">
 		<img src="images/banner/banner2.jpg" alt ="" />
 		<div class="parallax-overlay"></div>
-			<!-- Subpage title start -->
-			<div class="banner-title-content">
-	        	<div class="text-center">
-		        	<h2>Contact Us</h2>
-		        	<ul class="breadcrumb">
-			            <li>Home</li>
-			            <li><a href="#"> Contact</a></li>
-		          	</ul>
-	          	</div>
-          	</div><!-- Subpage title end -->
-	</div><!-- Banner area end -->
+	</div> <!-- Banner area end -->
 
 	<!-- Main container start -->
 
@@ -100,13 +88,11 @@
 			
 			<div class="row">
 				<!-- Map start here -->
-				<div id="map-wrapper" class="no-padding">
-					<div class="map" id="map"></div>
-				</div><!--/ Map end here -->	
+
 
 			</div><!-- Content row  end -->
 
-			<div class="gap-40"></div>
+
 
 			<div class="row">
 	    		<div class="col-md-7">
@@ -145,7 +131,7 @@
 	    		<div class="col-md-5">
 	    			<div class="contact-info">
 		    			<h3>Contact Details</h3>
-			    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget erat magna. Pellentesque justo ante</p>
+			    		<p>Get in touch with our team for inquiries, consultations, or support. We’re here to discuss your requirements and help you find the right solution for your business.</p>
 			    		<br>
 			    		<p><i class="fa fa-home info"></i>  1102 Saint Marys, Junction City, KS </p>
 						<p><i class="fa fa-phone info"></i>  +(785) 238-4131 </p>
@@ -161,58 +147,11 @@
 	
 
 	<!-- Footer start -->
-	<footer id="footer" class="footer">
-		<div class="container">
-
-			 <!-- toDo office address -->
-		</div><!-- Container end -->
-	</footer><!-- Footer end -->
+	<div id="footer-placeholder"></div>
 	
 
 	<!-- Footer start -->
-	<section id="copyright" class="copyright angle">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<ul class="footer-social unstyled">
-						<li>
-							<a title="Twitter" href="#">
-								<span class="icon-pentagon wow bounceIn"><i class="fa fa-twitter"></i></span>
-							</a>
-							<a title="Facebook" href="#">
-								<span class="icon-pentagon wow bounceIn"><i class="fa fa-facebook"></i></span>
-							</a>
-							<a title="Google+" href="#">
-								<span class="icon-pentagon wow bounceIn"><i class="fa fa-google-plus"></i></span>
-							</a>
-							<a title="linkedin" href="#">
-								<span class="icon-pentagon wow bounceIn"><i class="fa fa-linkedin"></i></span>
-							</a>
-							<a title="Pinterest" href="#">
-								<span class="icon-pentagon wow bounceIn"><i class="fa fa-pinterest"></i></span>
-							</a>
-							<a title="Skype" href="#">
-								<span class="icon-pentagon wow bounceIn"><i class="fa fa-skype"></i></span>
-							</a>
-							<a title="Dribble" href="#">
-								<span class="icon-pentagon wow bounceIn"><i class="fa fa-dribbble"></i></span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div><!--/ Row end -->
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<div class="copyright-info">
-         			 &copy; Copyright 2019 Themefisher. <span>Designed by <a href="https://themefisher.com">Themefisher.com</a></span>
-        			</div>
-				</div>
-			</div><!--/ Row end -->
-		   <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix">
-				<button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i></button>
-			</div>
-		</div><!--/ Container end -->
-	</section><!--/ Footer end -->
+	<!--/ Footer end -->
 
 	<!-- Javascript Files
 	================================================== -->
@@ -272,6 +211,12 @@
 		.then(response => response.text())
 		.then(data => {
 		  document.getElementById("nav-placeholder").innerHTML = data;
+		});
+
+		fetch("company-info-footer.html")
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById("footer-placeholder").innerHTML = data;
 		});
 
 	</script>
