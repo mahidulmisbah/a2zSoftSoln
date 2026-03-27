@@ -83,11 +83,6 @@
 			<div class="banner-title-content">
 	        	<div class="text-center">
 		        	<h2>About Us</h2>
-		        	<ul class="breadcrumb">
-			            <li>Home</li>
-			            <li>Company</li>
-			            <li><a href="#"> About Us</a></li>
-		          	</ul>
 	          	</div>
           	</div><!-- Subpage title end -->
 	</div><!-- Banner area end -->
@@ -95,6 +90,7 @@
 	<!-- Main container start -->
 
 	<section id="main-container">
+
 		<div class="container">
 
 			<!-- Company Profile -->
@@ -222,104 +218,34 @@
 		<div class="gap-60"></div>
 
 
-		<div class="container"><!-- 2nd container start -->
+		<div class="container">
 
-			<!-- Team start -->
 			<div class="team">
 
 				<div class="row">
-				<div class="col-md-12 heading">
-					<span class="title-icon pull-left"><i class="fa fa-weixin"></i></span>
-					<h2 class="title">Meet with our Team <span class="title-desc">A Quality Experience Team with 3-6 years experience</span></h2>
-				</div>
-			</div><!-- Title row end -->
+					<div class="col-md-12 heading">
 
-			<div class="row text-center">
-				<div class="col-md-3 col-sm-6">
-					<div class="team wow slideInLeft">
-						<div class="img-hexagon">
-							<img src="images/team/team2.jpg" alt="">
-							<span class="img-top"></span>
-							<span class="img-bottom"></span>
-						</div>
-						<div class="team-content">
-							<h3>MD. Mahidul Islam</h3>
-							<p>Web Designer</p>
-							<div class="team-social">
-								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
-								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
-								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
-								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
-							</div>
-						</div>
-					</div>
-				</div><!--/ Team 1 end -->
-				<div class="col-md-3 col-sm-6">
-					<div class="team wow slideInLeft">
-						<div class="img-hexagon">
-							<img src="images/team/team4.jpg" alt="">
-							<span class="img-top"></span>
-							<span class="img-bottom"></span>
-						</div>
-						<div class="team-content">
-							<h3>S.A.M Toufique Hasan</h3>
-							<p>Mobile Application Developer</p>
-							<div class="team-social">
-								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
-								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
-								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
-								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
-							</div>
-						</div>
-					</div>
-				</div><!--/ Team 2 end -->
-				<div class="col-md-3 col-sm-6">
-					<div class="team wow slideInRight">
-						<div class="img-hexagon">
-							<img src="images/team/team2.jpg" alt="">
-							<span class="img-top"></span>
-							<span class="img-bottom"></span>
-						</div>
-						<div class="team-content">
-							<h3>Sabuj Sarker</h3>
-							<p>Mobile Application Developer</p>
-							<div class="team-social">
-								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
-								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
-								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
-								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
-							</div>
-						</div>
-					</div>
-				</div><!--/ Team 3 end -->
-				<div class="col-md-3 col-sm-6">
-					<div class="team animate wow slideInRight">
-						<div class="img-hexagon">
-							<img src="images/team/team4.jpg" alt="">
-							<span class="img-top"></span>
-							<span class="img-bottom"></span>
-						</div>
-						<div class="team-content">
-							<h3>Shafiqul Islam</h3>
-							<p>Web Designer</p>
-							<div class="team-social">
-								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
-								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
-								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
-								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
-							</div>
-						</div>
-					</div>
-				</div><!--/ Team 4 end -->
-				</div><!--/ Content row end -->
+						<span class="title-icon pull-left">
+						<i class="fa fa-weixin"></i>
+						</span>
 
-			</div><!-- Team end -->
+						<h2 class="title">
+						Meet with our Team
+						<span class="title-desc">
+						A Quality Experience Team with 3-6 years experience
+						</span>
+						</h2>
 
-		</div><!-- 2nd container end -->
+					</div>
+					</div>
+
+
+				<div class="row text-center" id="team-container"></div>
+
+			</div>
+
+		</div>  <!--/ container end -->
+
 	</section><!--/ Main container end -->
 	
 
@@ -363,6 +289,8 @@
 	<script type="text/javascript" src="js/waypoints.min.js"></script>
 	<!-- Template custom -->
 	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/about-team.js"></script>
+	<script type="text/javascript" src="js/about-team-render.js"></script>
 	</div><!-- Body inner end -->
 	<script>
 	  fetch("navigation.html")
@@ -376,8 +304,7 @@
 		.then(data => {
 		  document.getElementById("footer-placeholder").innerHTML = data;
 		});
-
-
 	</script>
+
 </body>
 </html>
