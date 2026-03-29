@@ -372,7 +372,7 @@ blockquote {
 }
 
 .parallax4{
-	background: url(../images/parallax/parallax4.jpg) no-repeat;
+	background: url(../images/parallax/parallax3.jpg) no-repeat;
 }
 
 .parallax .btn.solid {
@@ -652,7 +652,7 @@ blockquote {
 
 .header-solid{
 	background: #191919;
-	box-shadow: 0px 1px 7px 0 rgba(0, 0, 0, 0.2); */
+	box-shadow: 0px 1px 7px 0 rgba(0, 0, 0, 0.2);
 }
 
 .header-solid ul.navbar-nav > li > a{
@@ -3411,4 +3411,43 @@ a.close-styler{
 	                   /* distance from top */
 	left: 20px;        /* distance from left */
 	z-index: 1000;     /* stays above other elements */
+}
+
+/* =========================
+TEAM CAROUSEL STYLING
+Controls horizontal scrolling
+layout and arrow appearance
+========================= */
+
+.team-carousel-wrapper {
+    display: flex; /* aligns arrows + content horizontally */
+    align-items: center;
+    position: relative;
+}
+
+.team-carousel {
+    overflow: hidden; /* hides extra members outside visible area */
+    width: 100%;
+}
+
+#team-carousel-container {
+    display: flex; /* makes members appear side-by-side */
+    flex-wrap: nowrap;
+    transition: transform 0.4s ease; /* smooth sliding animation */
+}
+/* Arrow button styling */
+.team-arrow {
+    background: #007bff;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 16px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* Arrow hover effect */
+.team-arrow:hover {
+    background: #0056b3;
 }
