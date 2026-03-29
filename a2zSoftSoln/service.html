@@ -45,6 +45,125 @@
 	<link rel="stylesheet" href="css/cd-hero.css">
 	<!-- Style Swicther -->
 	<link id="style-switch" href="css/presets/preset3.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        .call-to-action {
+        background-color: #007bff;
+        color: white;
+        padding: 60px 0;
+        border-radius: 8px;
+    }
+
+    .call-to-action h3 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .call-to-action p {
+        font-size: 16px;
+        margin-bottom: 30px;
+        color: #f1f1f1;
+    }
+
+    .call-to-action .btn {
+        background-color: #f8f9fa;
+        color: #007bff;
+        padding: 15px 40px;
+        font-size: 18px;
+        text-transform: uppercase;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .call-to-action .btn:hover {
+        background-color: #0056b3;
+        color: white;
+    }
+
+    /* Add icon styling */
+    .call-to-action .btn i {
+        margin-right: 10px;
+    }
+
+
+	/* Ensure all service card elements are properly aligned */
+.service-card {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center;     /* Horizontally center content */
+    height: 100%;
+    min-height: 350px; /* Ensure minimum height */
+}
+
+/* Service icon size and alignment */
+.service-card .service-icon {
+    margin-bottom: 15px; /* Space between icon and heading */
+    display: flex;
+    justify-content: center; /* Center the icon */
+    align-items: center;     /* Center the icon vertically */
+}
+
+/* Ensure the heading and text are aligned and centered */
+.service-card h3 {
+    margin-top: 0;  /* Remove any extra margin at the top */
+    margin-bottom: 15px; /* Space between heading and text */
+    font-size: 1.5rem; /* Make the heading larger */
+    color: #333; /* Set the heading color */
+}
+
+/* Adjusted larger font size for better readability */
+.service-card p {
+    text-align: center; /* Center the text */
+    font-size: 1.375rem; /* Increase font size */
+    line-height: 1.8; /* Adjust line-height for readability */
+    color: #666; /* Set a lighter color for text */
+    margin: 0 10px; /* Added some margin to avoid text touching card borders */
+}
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        .call-to-action h3 {
+            font-size: 24px;
+        }
+
+        .call-to-action p {
+            font-size: 14px;
+        }
+
+        .call-to-action .btn {
+            padding: 12px 30px;
+            font-size: 16px;
+        }
+          .row.no-wrap {
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+        }
+
+        .service-card {
+            padding: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+        }
+
+        .service-card p {
+            font-size: 13px;
+        }
+    }
+
+    </style>
 
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 	<!--[if lt IE 9]>
@@ -101,108 +220,73 @@
 				<!-- Services Heading -->
 				<div class="row">
 					<div class="col-md-12 heading text-center">
-						<span class="title-icon classic"><i class="fa fa-cogs"></i></span>
+						<span class="title-icon classic"><i class="bi bi-globe"></i></span>
 						<h2 class="title classic">Our Services</h2>
 					</div>
 				</div>
+				<!-- FIRST ROW (3 CARDS) -->
+<div class="row text-center">
 
-				<!-- Services Grid -->
-				<div class="row">
-					<!-- Service Card -->
-					<div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
-						<div class="service-card text-center">
-							<div class="service-icon">
-								<i class="fa fa-tachometer"></i>
-							</div>
-							<h3>Web & App Development</h3>
-							<p>We build modern, responsive websites and scalable web & mobile apps that are fast,
-								secure, and tailored to your business needs.</p>
-						</div>
-					</div>
+    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="bi bi-laptop" style="font-size: 36px; color: #007bff;"></i>
+            </div>
+            <h3>Web Application</h3>
+            <p>We create modern, responsive websites and scalable web & mobile applications designed to grow with your business. Our solutions are fast, secure, and fully customized to meet your unique needs, ensuring optimal performance and an exceptional user experience.</p>
+        </div>
+    </div>
 
-					<div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
-						<div class="service-card text-center">
-							<div class="service-icon">
-								<i class="fa fa-credit-card"></i>
-							</div>
-							<h3>eCommerce Websites</h3>
-							<p>Fast, secure, and scalable eCommerce platforms that drive sales and deliver seamless
-								shopping experiences.</p>
-						</div>
-					</div>
+    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="bi bi-cart" style="font-size: 36px; color: #28a745;"></i>
+            </div>
+            <h3>eCommerce Websites</h3>
+            <p>We build fast, secure, and scalable eCommerce platforms designed to boost your sales and deliver a seamless shopping experience. With user-friendly interfaces and optimized performance, we help you create lasting connections with your customers.</p>
+        </div>
+    </div>
 
-					<div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay=".6s">
-						<div class="service-card text-center">
-							<div class="service-icon">
-								<i class="fa fa-lightbulb-o"></i>
-							</div>
-							<h3>Enterprise Software</h3>
-							<p>Scalable, intuitive software solutions that integrate seamlessly and enhance operational
-								efficiency.</p>
-						</div>
-					</div>
+    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay=".6s">
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="bi bi-tablet" style="font-size: 36px; color: #ff6347;"></i>
+            </div>
+            <h3>Mobile Application</h3>
+            <p>We develop scalable and intuitive mobile applications that seamlessly integrate with your existing systems, enhancing operational efficiency and providing a smooth, user-friendly experience for both you and your customers.</p>
+        </div>
+    </div>
 
-					<div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay=".8s">
-						<div class="service-card text-center">
-							<div class="service-icon">
-								<i class="fa fa-bar-chart"></i>
-							</div>
-							<h3>ERP Development</h3>
-							<p>Robust ERP systems that streamline operations, improve efficiency, and provide real-time
-								business insights.</p>
-						</div>
-					</div>
-				</div>
+</div>
+
+<!-- SECOND ROW (2 CARDS CENTERED) -->
+<div class="row text-center" style="display: flex; justify-content: center;">
+
+    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay=".8s">
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fa fa-bar-chart" style="font-size: 36px; color: #ffc107;"></i>
+            </div>
+            <h3>ERP Development</h3>
+            <p>We develop robust ERP systems that streamline your operations, boost efficiency, and deliver real-time insights, empowering you to make informed decisions and drive business growth.</p>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="1s">
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="bi bi-cpu" style="font-size: 36px; color: #ffc107;"></i>
+            </div>
+            <h3>Artificial Intelligence</h3>
+            <p>We develop custom AI solutions that automate processes, provide predictive insights, and enhance decision-making. Our AI-driven technologies help you streamline operations, improve efficiency, and stay ahead of the competition.</p>
+        </div>
+    </div>
+
+</div>
 
 				<div class="gap-40"></div>
 
 				<!-- Second Row -->
-				<div class="row">
-					<div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
-						<div class="service-card text-center">
-							<div class="service-icon">
-								<i class="fa fa-bicycle"></i>
-							</div>
-							<h3>AR/VR Solutions</h3>
-							<p>Immersive AR and VR applications that enhance engagement, training, and interactive
-								experiences.</p>
-						</div>
-					</div>
-
-					<div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
-						<div class="service-card text-center">
-							<div class="service-icon">
-								<i class="fa fa-comments"></i>
-							</div>
-							<h3>Cyber Security</h3>
-							<p>Comprehensive cybersecurity solutions to protect your business from threats, with risk
-								assessment, monitoring, and compliance.</p>
-						</div>
-					</div>
-
-					<div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay=".6s">
-						<div class="service-card text-center">
-							<div class="service-icon">
-								<i class="fa fa-cogs"></i>
-							</div>
-							<h3>QA Testing & Automation</h3>
-							<p>Advanced QA testing and automation to deliver secure, reliable, and high-performance
-								applications.</p>
-						</div>
-					</div>
-
-					<div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay=".8s">
-						<div class="service-card text-center">
-							<div class="service-icon">
-								<i class="fa fa-lightbulb"></i>
-							</div>
-							<h3>AI & Machine Learning</h3>
-							<p>Custom AI and ML solutions to automate processes, gain insights, and transform business
-								outcomes.</p>
-						</div>
-					</div>
-				</div>
-
 			</div>
 			</section><!--/ 1st container end -->
 
@@ -211,22 +295,22 @@
 			<!-- Testimonial start--z
 			<div class="gap-60"></div>
 
-
-			<div class="container"> 2nd container start -->
-
-			</div><!-- 2nd container end -->
-			</section>
-			<!--/ Main container end -->
-
-			<section class="call-to-action">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12">
-							<h3>Join a2zSoftSoln and Power Your Business with End-to-End IT Solutions</h3>
-						</div>
-					</div>
-				</div>
-			</section>
+            <--Call-to-action Section -->
+            <section class="call-to-action" style="background-color: #007bff; color: white; padding: 60px 0;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h3 style="font-size: 28px; font-weight: bold; margin-bottom: 20px;">Join a2zSoftSoln and Power Your Business with End-to-End IT Solutions</h3>
+                            <p style="font-size: 16px; margin-bottom: 30px; color: #f1f1f1;">
+                                Our custom solutions help your business grow, stay secure, and maximize its potential. Let’s make it happen together!
+                            </p>
+                            <a href="contact.html" class="btn btn-light btn-lg" style="background-color: #f8f9fa; color: #007bff; padding: 15px 40px; font-size: 18px; text-transform: uppercase; border-radius: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-decoration: none; transition: background-color 0.3s ease;">
+                                Get Started Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 			<!-- Footer start -->
 
