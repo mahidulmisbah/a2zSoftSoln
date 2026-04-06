@@ -1,0 +1,92 @@
+/* ===== Blue + Coral + White Theme for Body + Footer ===== */
+
+:root {
+  --primary-blue: #0A2A66;
+  --coral: #FF6F61;
+  --white: #FFFFFF;
+  --text-dark: #1F2937;
+  --light-blue: #5DADE2;
+}
+
+/* ===== Body Sections ===== */
+body,
+#main-container,
+.section {
+  background-color: var(--white);
+  color: var(--text-dark);
+}
+
+/* Headings in body */
+#main-container h1,
+#main-container h2,
+#main-container h3,
+#main-container h4 {
+  color: var(--primary-blue);
+}
+
+/* Paragraphs and links */
+#main-container p {
+  color: var(--text-dark);
+}
+
+#main-container a {
+  color: var(--primary-blue);
+}
+
+#main-container a:hover {
+  color: var(--light-blue);
+}
+
+/* Counter Section */
+.ts_counter_bg {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+.ts_counter_bg .facts-icon i {
+  color: var(--coral);
+}
+
+.ts_counter_bg .facts-num {
+  color: var(--white);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--coral);
+  border-color: var(--coral);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--light-blue);
+  border-color: var(--light-blue);
+  color: var(--white);
+}
+
+/* Team Section */
+.team h3 {
+  color: var(--primary-blue);
+}
+
+.team p {
+  color: var(--text-dark);
+}
+
+/* Footer */
+#footer-placeholder {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 40px 0;
+}
+
+#footer-placeholder a {
+  color: var(--white);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+#footer-placeholder a:hover {
+  color: var(--coral);
+}
