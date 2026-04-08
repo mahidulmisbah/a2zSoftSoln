@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-	<!-- Basic Page Needs
+<!-- Basic Page Needs
 	================================================== -->
 	<meta charset="utf-8">
-    <title>PiRhoSoft</title>
-    <meta name="description" content="">	
+    <title>PiRhosoft</title>
+    <meta name="description" content="">
 	<meta name="author" content="">
 
 	<!-- Mobile Specific Metas
@@ -19,10 +18,10 @@
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/favicon-144x144.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/favicon-72x72.png">
 	<link rel="apple-touch-icon-precomposed" href="img/favicon/favicon-54x54.png">
-	
+
 	<!-- CSS
 	================================================== -->
-	
+
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<!-- Template styles-->
@@ -42,17 +41,318 @@
 	<link rel="stylesheet" href="css/flexslider.css">
 	<!-- Flexslider -->
 	<link rel="stylesheet" href="css/cd-hero.css">
-
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+<style>
 
+
+/* SECTION */
+.section {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.subtitle {
+    color: #00eaff;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+.highlight {
+    color: #00eaff;
+}
+
+.description {
+    margin-top: 20px;
+    color: #a0b3b8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.card {
+    background: #050c10;
+    padding: 30px 40px;
+    border-radius: 12px;
+    width: 220px;
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 234, 255, 0.3);
+}
+
+.card h2 {
+    color: #00eaff;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #a0b3b8;
+    font-size: 14px;
+}
+
+/* WHY JOIN GRID */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-card {
+    background: #050c10;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.1);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 234, 255, 0.3);
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background: #0f3b44;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #00eaff;
+    font-size: 22px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #a0b3b8;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    h1 { font-size: 40px; }
+}
+
+.filters {
+    margin-top: 30px;
+}
+
+.filters button {
+    background: #0a1a1f;
+    border: none;
+    color: #a0b3b8;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filters button.active,
+.filters button:hover {
+    background: #00eaff;
+    color: #000;
+}
+
+.jobs {
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.job {
+    background: #050c10;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.1);
+    overflow: hidden;
+}
+
+/* HEADER */
+.job-header {
+    padding: 20px;
+    cursor: pointer;
+}
+
+/* ROW (MAIN LINE) */
+.job-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* LEFT SIDE (TITLE + TAGS INLINE) */
+.left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* TITLE */
+.left h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* TAGS */
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(0, 234, 255, 0.1);
+    color: #00eaff;
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 234, 255, 0.3);
+}
+
+.tag.vacancy {
+    background: rgba(0, 234, 255, 0.15);
+    border-color: #00eaff;
+}
+
+/* META LINE */
+.meta {
+    margin-top: 10px;
+    color: #a0b3b8;
+    font-size: 13px;
+}
+
+/* ARROW (RIGHT SIDE, INLINE) */
+.arrow {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* BODY */
+.job-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 20px;
+}
+
+.job-body p,
+.job-body ul {
+    margin: 10px 0;
+}
+
+.job-body ul {
+    padding-left: 20px;
+}
+
+.job:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 234, 255, 0.3);
+}
+
+/* ROTATE ARROW */
+.job.open .arrow {
+    transform: rotate(180deg);
+}
+
+/* BUTTON */
+.resume-btn {
+    background: transparent;
+    color: #00eaff;
+    border: 2px solid #00eaff;
+    padding: 14px 28px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-btn:hover {
+    background: #00eaff;
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.6);
+}
+
+.resume-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(0,234,255,0.4), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.resume-btn:hover::before {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleJob(element) {
+    const job = element.parentElement;
+    const body = element.nextElementSibling;
+
+    job.classList.toggle("open");
+
+    if (body.style.maxHeight) {
+        body.style.maxHeight = null;
+    } else {
+        body.style.maxHeight = body.scrollHeight + "px";
+    }
+}
+</script>
 </head>
-	
+
 <body>
-	<div class="body-inner">
-	<!-- Header start -->
-	<header id="header" class="navbar-fixed-top header" role="banner">
+<div class="body-inner">
+<header id="header" class="navbar-fixed-top header" role="banner">
 		<div class="container">
 			<div class="row">
 				<!-- Logo start -->
@@ -64,10 +364,8 @@
 				        <span class="icon-bar"></span>
 				    </button>
 				    <div class="navbar-brand navbar-bg">
-					    <a href="index.html">
-					    	<img class="img-responsive" src="images/logo.png" alt="logo">
-					    </a> 
-				    </div>                   
+						<img class="img-responsive" src="images/logo.png" alt="logo">
+				    </div>
 				</div><!--/ Logo end -->
 				<div id="nav-placeholder"></div>
 			</div><!--/ Row end -->
@@ -75,133 +373,249 @@
 	</header><!--/ Header end -->
 
 	<div id="banner-area">
-		<img src="images/banner/banner2.jpg" alt ="" />
+		<img src="images/banner/banner2.png" alt ="" />
 		<div class="parallax-overlay"></div>
 			<!-- Subpage title start -->
 			<div class="banner-title-content">
 	        	<div class="text-center">
-		        	<h2>Jobs Openings</h2>
+					<h2 class="highlight" >Career</h2>
 	          	</div>
           	</div><!-- Subpage title end -->
 	</div><!-- Banner area end -->
 
-	<!-- Main container start -->
+<!-- TOP SECTION -->
+<div class="section">
+    <h3>Build the <span class="highlight">Future</span> with Us</h3>
 
-	<!-- =========================
-CAREER SECTION START
-Purpose:
-Display professional message when no jobs are available
-Future-ready for Django dynamic integration
-========================= -->
+    <p class="description">
+        Join Australian's leading technology company. Work on cutting-edge projects, grow your skills, and shape the future of technology in Web4 and beyond.
+    </p>
 
-<section id="main-container">
+    <div class="stats">
+        <div class="card">
+            <h2>50+</h2>
+            <p>Team Members</p>
+        </div>
 
-	<div class="container">
+        <div class="card">
+            <h2>100%</h2>
+            <p>Equal Pay</p>
+        </div>
 
-		<div class="row">
+        <div class="card">
+            <h2>7</h2>
+            <p>Technology Verticals</p>
+        </div>
 
-			<!-- =========================
-			LEFT CONTENT AREA
-			Main career message
-			========================= -->
+        <div class="card">
+            <h2>95%</h2>
+            <p>Employee Satisfaction</p>
+        </div>
+    </div>
+</div>
 
-			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+<!-- WHY JOIN SECTION -->
+<div class="section">
+    <h2>Why Join <span class="highlight">PiRhoSoft?</span></h2>
 
-				<h3 class="title-border">Career Opportunities at PiRhosoft</h3>
+    <p class="description">
+        We believe in investing in our people. Here’s what makes PiRhoSoft a great place to work.
+    </p>
 
-				<!-- Main Notice Message -->
-				<p>
-					Thank you for your interest in joining <strong>PiRhosoft</strong>.
-					Currently, we do not have any open positions available.
-					However, we are always excited to connect with passionate,
-					creative, and talented professionals who want to grow with us.
-				</p>
+    <div class="features">
 
-				<!-- Encouragement Message -->
-				<p>
-					Please check back soon for future openings. You may also submit
-					your resume for consideration in upcoming opportunities that
-					match your expertise and career goals.
-				</p>
-				<!-- Resume Submission Button -->
-				<p>
-					<a href="contact.html" class="btn btn-primary solid">
-						Submit Your Resume
-						<i class="fa fa-long-arrow-right"></i>
-					</a>
-				</p>
-			</div>
-			<!-- LEFT CONTENT END -->
+        <div class="feature-card">
+            <div class="icon">$</div>
+            <h3>Competitive Salary</h3>
+            <p>Industry-leading compensation with performance bonuses and annual increments</p>
+        </div>
 
-			<!-- =========================
-			RIGHT SIDEBAR AREA
-			Application instructions + company value
-			========================= -->
-			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-				<div class="sidebar sidebar-right">
-					<!-- How to Apply Section -->
-					<div class="widget widget-categories">
-						<h3>How to Apply</h3>
-						<p>
-							You can send your CV and portfolio to
-							<strong>career@a2zsoftsoln.com.au</strong>.
-							Our recruitment team will contact you when a suitable
-							position becomes available.
-						</p>
-					</div>
-					<!-- Why Join Us Section -->
-					<div class="widget widget-tags">
-						<h3>Why Join PiRhosoft?</h3>
-						<p>
-							At PiRhosoft, we believe in innovation, teamwork,
-							and continuous learning. We provide a supportive
-							environment where professionals can enhance their
-							skills, contribute to meaningful projects, and build
-							a strong long-term career in technology.
-						</p>
-					</div>
-				</div>
-			</div>
-			<!-- SIDEBAR END -->
-		</div>
-	</div>
-</section>
+        <div class="feature-card">
+            <div class="icon">❤</div>
+            <h3>Health & Wellness</h3>
+            <p>Comprehensive health insurance for you and your family, mental health support</p>
+        </div>
 
-<!-- =========================
-CAREER SECTION END
-========================= -->
+        <div class="feature-card">
+            <div class="icon">📈</div>
+            <h3>Career Growth</h3>
+            <p>Clear career progression, mentorship programs, and leadership opportunities</p>
+        </div>
 
+        <div class="feature-card">
+            <div class="icon">&lt;/&gt;</div>
+            <h3>Latest Technology</h3>
+            <p>Work with cutting-edge tech stack, modern tools, and powerful workstations</p>
+        </div>
 
-<!-- =========================
-CALL TO ACTION SECTION
-Encourages future applicants
-========================= -->
+        <div class="feature-card">
+            <div class="icon">👥</div>
+            <h3>Great Culture</h3>
+            <p>Collaborative environment, work-life balance, team events, and flexible hours</p>
+        </div>
 
-<section class="call-to-action">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12">
-				<h3>
-					Build Your Future with PiRhosoft — Opportunities Coming Soon
-				</h3>
-			</div>
-		</div>
-	</div>
-</section>
+        <div class="feature-card">
+            <div class="icon">⏱</div>
+            <h3>Flexible Work</h3>
+            <p>Remote work options, flexible hours, and trust-based management</p>
+        </div>
 
-<!-- =========================
-CALL TO ACTION END
-========================= -->
+    </div>
+</div>
 
-	
+<div class="section">
+    <h2>Open <span class="highlight">Positions</span></h2>
+
+    <p class="description">
+        Explore our current job openings and find the perfect role for you.
+    </p>
+
+    <!-- FILTER BUTTONS -->
+    <div class="filters">
+        <button class="active">All</button>
+        <button>Creative and Digital</button>
+        <button>Business Development</button>
+    </div>
 
 
-			</div><!--/ Row end -->
-		   <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix">
-				<button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i></button>
-			</div>
-		</div><!--/ Container end -->
-	</section><!--/ Footer end -->
+	<div class="jobs">
+
+        <!-- JOB 1 -->
+        <div class="job">
+            <div class="job-header" onclick="toggleJob(this)">
+                <div class="job-row">
+                    <div class="left">
+                        <h3>Head of Department - Creative & Digital</h3>
+
+                        <div class="tags">
+                            <span class="tag">Creative</span>
+                            <span class="tag vacancy">1 Vacancy</span>
+                        </div>
+                    </div>
+
+                    <span class="arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"
+                                fill="none"
+                                stroke="#00eaff"
+                                stroke-width="2"
+                                stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                </div>
+
+                <p class="meta left">Remote • 6+ Years Experience • Negotiable</p>
+            </div>
+
+            <div class="job-body">
+                <p><strong>Description:</strong> Lead creative and digital strategy across all projects.</p>
+                <p><strong>Responsibilities:</strong></p>
+                <ul>
+                    <li>Lead creative team and campaigns</li>
+                    <li>Define digital marketing strategy</li>
+                    <li>Coordinate with stakeholders</li>
+                    <li>Ensure brand consistency</li>
+                </ul>
+
+                <button class="resume-btn">Send Your Resume</button>
+            </div>
+        </div>
+
+        <!-- JOB 2 -->
+        <div class="job">
+            <div class="job-header" onclick="toggleJob(this)">
+                <div class="job-row">
+                    <div class="left">
+                        <h3>Creative Lead</h3>
+
+                        <div class="tags">
+                            <span class="tag">Design</span>
+                            <span class="tag vacancy">2 Vacancies</span>
+                        </div>
+                    </div>
+
+                    <span class="arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"
+                                fill="none"
+                                stroke="#00eaff"
+                                stroke-width="2"/>
+                        </svg>
+                    </span>
+                </div>
+
+                <p class="meta left">Remote • 3-5 Years Experience • Negotiable</p>
+            </div>
+
+            <div class="job-body">
+                <p><strong>Description:</strong> Lead design and branding team.</p>
+                <p><strong>Responsibilities:</strong></p>
+                <ul>
+                    <li>Create UI/UX designs</li>
+                    <li>Guide junior designers</li>
+                    <li>Maintain brand identity</li>
+                </ul>
+
+                <button class="resume-btn">Send Your Resume</button>
+            </div>
+        </div>
+
+        <!-- JOB 3 -->
+        <div class="job">
+            <div class="job-header" onclick="toggleJob(this)">
+                <div class="job-row">
+                    <div class="left">
+                        <h3>Senior Business Analyst</h3>
+
+                        <div class="tags">
+                            <span class="tag">Business</span>
+                            <span class="tag vacancy">1 Vacancy</span>
+                        </div>
+                    </div>
+
+                    <span class="arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"
+                                fill="none"
+                                stroke="#00eaff"
+                                stroke-width="2"/>
+                        </svg>
+                    </span>
+                </div>
+
+                <p class="meta left">Hybrid • 2-4 Years Experience • Negotiable</p>
+            </div>
+
+            <div class="job-body">
+                <p><strong>Description:</strong> Analyze business processes and improve systems.</p>
+                <p><strong>Responsibilities:</strong></p>
+                <ul>
+                    <li>Requirement gathering</li>
+                    <li>Data analysis</li>
+                    <li>Process optimization</li>
+                    <li>Reporting & documentation</li>
+                </ul>
+
+                <button class="resume-btn">Send Your Resume</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- WHY JOIN SECTION -->
+<div class="section">
+    <h2>Don't See the Perfect Role?</h2>
+
+    <p class="description">
+        We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+    </p>
+	<button class="resume-btn">Send Your Resume</button>
+</div>
+
+		<!-- Footer start -->
+	<div id="footer-placeholder"></div>
+	<!--/ Footer end -->
 
 	<!-- Javascript Files
 	================================================== -->
@@ -218,7 +632,7 @@ CALL TO ACTION END
 	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
 	<!-- Bxslider -->
 	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
-	<!-- Owl Carousel -->
+	<!-- CD Hero slider -->
 	<script type="text/javascript" src="js/cd-hero.js"></script>
 	<!-- Isotope -->
 	<script type="text/javascript" src="js/isotope.js"></script>
@@ -235,15 +649,22 @@ CALL TO ACTION END
 	<script type="text/javascript" src="js/waypoints.min.js"></script>
 	<!-- Template custom -->
 	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/our-team.js"></script>
+	<script type="text/javascript" src="js/our-team-render.js"></script>
 	</div><!-- Body inner end -->
-    <script>
+	<script>
 	  fetch("navigation.html")
 		.then(response => response.text())
 		.then(data => {
 		  document.getElementById("nav-placeholder").innerHTML = data;
 		});
 
-
+	  fetch("company-info-footer.html")
+		.then(response => response.text())
+		.then(data => {
+		  document.getElementById("footer-placeholder").innerHTML = data;
+		});
 	</script>
+
 </body>
 </html>

@@ -69,6 +69,22 @@ body{
 	background: #0a1215;
 }
 
+	.card-btn {
+	  display: inline-block;
+	  margin-top: 15px;
+	  padding: 12px 20px;
+	  border-radius: 8px;
+	  text-decoration: none;
+	  color: #fff;
+	  background: #082553;
+	  transition: all 0.3s ease;
+	}
+
+		.card-btn:hover {
+	  transform: scale(1.05);
+		box-shadow:  0 5px 30px #1555F5;
+	}
+
 h1, h2, h3{
 	color: #FFFFFF;
 }
@@ -761,6 +777,7 @@ ul.navbar-nav > li > a i{
 .header-bgnone ul.navbar-nav > li:hover > a,
 .header-bgnone ul.navbar-nav > li.active > a{
 	color: #000;
+	position: absolute;
 }
 
 
@@ -2529,6 +2546,75 @@ ul.arrow li:before {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
+}
+
+.bold {
+  color: #00f6fa;
+}
+
+.build {
+  color: #4da6ff;
+}
+
+.ship {
+  color: #0071fa;
+}
+
+
+/* Container for cards */
+.about-cards-container {
+  display: flex;
+  justify-content: space-between; /* side by side with space */
+  gap: 30px; /* spacing between cards */
+  flex-wrap: wrap; /* wraps on smaller screens */
+  padding: 50px 60px;
+  background: #0f172a; /* dark background */
+}
+
+/* Card Styling */
+.about-card {
+  background: #111827;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  flex: 1; /* equal width cards */
+  min-width: 250px; /* prevents them from shrinking too much */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Gradient border on hover */
+.about-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border-image: linear-gradient(45deg, #4da6ff, #a855f7, #33cc99);
+  border-image-slice: 1;
+  border-style: solid;
+}
+
+/* Card Titles */
+.about-card h3 {
+  color: #4da6ff; /* accent color */
+  margin-bottom: 15px;
+}
+
+/* Card Paragraphs */
+.about-card p {
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* Responsive: stack cards on smaller screens */
+@media (max-width: 900px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
 }
 
 /* Services */
