@@ -376,19 +376,19 @@ blockquote {
 }
 
 .parallax1{
-	background: url(../images/parallax/parallax1.jpg) no-repeat;
+	background: url(../images/parallax/parallax2.png) no-repeat;
 }
 
 .parallax2{
-	background: url(../images/parallax/parallax2.jpg) no-repeat;
+	background: url(../images/parallax/parallax2.png) no-repeat;
 }
 
 .parallax3{
-	background: url(../images/parallax/parallax3.jpg) no-repeat;
+	background: url(../images/parallax/parallax3.png) no-repeat;
 }
 
 .parallax4{
-	background: url(../images/parallax/parallax3.jpg) no-repeat;
+	background: url(../images/parallax/parallax3.png) no-repeat;
 }
 
 .parallax .btn.solid {
