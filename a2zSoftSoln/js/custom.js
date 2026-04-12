@@ -1,10 +1,4 @@
 /*
-  * @package Bizcraft
-  * @subpackage Bizcraft HTML
-  * 
-  * Template Scripts
-  * Created by Tripples
-  
    1.    Style Switcher
    2.    Navigation
    3.    Fixed Header
@@ -16,8 +10,6 @@
    9.    Contact Map
    10.   Video Background
    11.   Back To Top
-
-  
 */
 
 

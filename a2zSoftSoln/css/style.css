@@ -698,7 +698,7 @@ blockquote {
 }
 
 
-/* Main navigation */
+/* Main navigation  navbar*/
 
 .navbar{
 	border-radius: 0;
@@ -738,9 +738,13 @@ ul.navbar-nav > li:last-child a{
 	padding-right: 0;
 }
 
-ul.navbar-nav > li.active > a,
+
+ul.navbar-nav > li.active > a {
+    color: #f7aafa !important;
+}
+
 ul.navbar-nav > li > a:hover{
-    color: #07aaf0; !important; /* Change this to your desired hover color */
+    color: #07aaf0; /* Change this to your desired hover color */
     transition: color 0.3s ease; /* smooth color transition on hover */
 }
 
@@ -776,7 +780,6 @@ ul.navbar-nav > li > a i{
 
 .header-bgnone ul.navbar-nav > li:hover > a,
 .header-bgnone ul.navbar-nav > li.active > a{
-	color: #000;
 	position: absolute;
 }
 
@@ -1248,7 +1251,7 @@ ul.navbar-nav > li > a i{
 }
 
 .landing-tab .nav-tabs>li.active .tab-info h3{
-	color: #323232;
+	color: #FFFFFF;
 }
 
 .landing-tab .nav-tabs>li{
@@ -1288,7 +1291,7 @@ ul.navbar-nav > li > a i{
 	left: 70px;
 	top: 50%;
 	margin-top: -12px;
-	color : #FFFFFF;
+	color : #6A6A6A;
 }
 
 .landing-tab .tab-info h3{
