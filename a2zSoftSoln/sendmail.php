@@ -3,11 +3,12 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/PHPMailer.php';
-require 'PHPMailer/SMTP.php';
-require 'PHPMailer/Exception.php';
+require 'PHPMailer/src/PHPMailer.php'; 
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
 
-error_reporting(0);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 header('Content-Type: application/json');
 
@@ -32,12 +33,13 @@ try {
 
     // 🔐 YOUR GMAIL DETAILS
     $mail->Username = 'mahidul.rbl.cse.du@gmail.com';
-    $mail->Password = 'fixd myfj aesb fazi'; // Gmail App Password
+    //$mail->Password = 'fixd myfj aesb fazi'; // Gmail App Password
+    $mail->Password = 'fixdmyfjaesbfazi';
 
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
-
-    $mail->setFrom($email, $name);
+    $mail->setFrom('mahidul.rbl.cse.du@gmail.com', 'PiRhosoft Contact');
+    $mail->addReplyTo($email, $name);
     $mail->addAddress('mahidul.rbl.cse.du@gmail.com');
 
     $mail->Subject = $subject;
@@ -54,7 +56,7 @@ try {
 
     $response = [
         "status" => "error",
-        "message" => "Message failed ❌"
+        "message" => "Mailer Error: " . $mail->ErrorInfo
     ];
 }
 

@@ -1,3 +1,4 @@
+console.log("JS LOADED SUCCESSFULLY");
 document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("contact-form");
@@ -11,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let formData = new FormData(this);
 
-        // 🔄 START LOADING
+        // 🔄 LOADING STATE
         btn.disabled = true;
-        btnText.innerHTML = 'Sending <span class="loader"></span>';
+        btnText.innerHTML = 'Sending... <span class="loader"></span>';
 
         fetch("sendmail.php", {
             method: "POST",
@@ -22,33 +23,33 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(res => res.text())
         .then(text => {
 
-            let data;
-
+            console.log("RAW RESPONSE FROM PHP:", text); // 🔥 DEBUG
             try {
-                data = JSON.parse(text);
+                let data = JSON.parse(text);
+
+                showPopup(data.message, data.status);
+
+                if (data.status === "success") {
+                    form.reset();
+                }
+
             } catch (e) {
-                showPopup("Server error ❌", "error");
-                console.log("Invalid response:", text);
+                console.log("JSON PARSE ERROR:", e);
+                console.log("INVALID RESPONSE:", text);
 
-                resetButton();
-                return;
-            }
-
-            showPopup(data.message, data.status);
-
-            if (data.status === "success") {
-                form.reset();
+                showPopup("Server error ❌ (invalid response)", "error");
             }
 
             resetButton();
         })
-        .catch(() => {
+        .catch(err => {
+            console.log("FETCH ERROR:", err);
+
             showPopup("Something went wrong ❌", "error");
             resetButton();
         });
     });
 
-    // 🔁 RESET BUTTON FUNCTION
     function resetButton() {
         btn.disabled = false;
         btnText.innerHTML = "SEND MESSAGE";
@@ -56,10 +57,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// 🌟 POPUP FUNCTION
 function showPopup(message, type) {
     let popup = document.getElementById("popup");
 
-    if (!popup) return;
+    if (!popup) {
+        console.log("Popup div not found!");
+        return;
+    }
 
     popup.innerHTML = message;
     popup.style.display = "block";
@@ -67,5 +72,5 @@ function showPopup(message, type) {
 
     setTimeout(() => {
         popup.style.display = "none";
-    }, 3000); // ⏱️ popup timer (3 sec)
+    }, 3000);
 }

@@ -40,6 +40,16 @@ const teamListMembers = [
     },
     {
         id: 5,
+        name: "Sabuj Sarkeer",
+        role: "Mobile Apps Developer",
+        image: "images/team/team4.jpg",
+        description: "Specializing in Django-based application development, RESTful API design, and database optimization. Focused on building secure, maintainable, and scalable backend systems that ensure smooth integration with frontend.",
+        facebook: "#",
+        twitter: "#",
+        linkedin: "#"
+    },
+    {
+        id: 6,
         name: "Faria Islam Hridy",
         role: "SQA Engeneer",
         image: "images/team/team4.jpg",
